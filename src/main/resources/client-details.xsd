@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://kogut.ru/ws/clients"
+           xmlns:tns="http://kogut.ru/ws/clients" elementFormDefault="qualified">
+
+
+    <xs:element name="saveClientRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="address" type="xs:string"/>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="delete" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateClientRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="tns:client"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClientByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllClientsRequest"/>
+
+    <xs:element name="deleteClientRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="tns:client"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="client">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="address" type="xs:string" minOccurs="0"/>
+            <xs:element name="delete" type="xs:boolean"/>
+            <xs:element name="title" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
