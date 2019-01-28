@@ -68,6 +68,7 @@ public class ProductRepositoryWS {
     }
 
     public Product convertProductDbToProductXml(ru.kogut.enterprise.models.Product product){
+        if (product == null) return null;
         Product productXml = new Product();
         productXml.setId(product.getId());
         productXml.setTitle(product.getTitle());
