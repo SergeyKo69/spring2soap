@@ -9,6 +9,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import ru.kogut.enterprise.ws.products.*;
 import ru.kogut.enterprise.ws.repository.ProductRepositoryWS;
 
+
 @Endpoint
 public class ProductEndpoint {
 
